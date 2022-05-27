@@ -1,3 +1,7 @@
 .vs
 TimesheetManagement.API/bin
 TimesheetManagement.API/obj
+TimesheetManagement.Domain/bin
+TimesheetManagement.Domain/obj
+TimesheetManagement.Services/bin
+TimesheetManagement.Services/obj
