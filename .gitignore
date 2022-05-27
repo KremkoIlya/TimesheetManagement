@@ -5,3 +5,7 @@ TimesheetManagement.Domain/bin
 TimesheetManagement.Domain/obj
 TimesheetManagement.Services/bin
 TimesheetManagement.Services/obj
+TimesheetManagement.Utils/bin
+TimesheetManagement.Utils/obj
+TimesheetManagement.Data/bin
+TimesheetManagement.Data/obj
