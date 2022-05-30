@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using TimesheetManagement.Data.Contexts;
+using TimesheetManagement.Services.Interfaces.DbContext;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,8 @@ builder.Services.AddDbContext<TimesheetManagementContext>(options =>
     {
         options.UseSqlServer(builder.Configuration.GetConnectionString("TimesheetManagementSQL"));
     });
+
+builder.Services.AddScoped<ITimesheetManagementContext, TimesheetManagementContext>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

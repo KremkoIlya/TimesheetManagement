@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TimesheetManagement.Domain\TimesheetManagement.Domain.csproj" />
+    <ProjectReference Include="..\TimesheetManagement.Services\TimesheetManagement.Services.csproj" />
   </ItemGroup>
 
 </Project>
