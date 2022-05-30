@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TimesheetManagement.Domain.Entities.Timesheet;
+using TimesheetManagement.Services.General;
 
 namespace TimesheetManagement.Services.Timesheet.Interfaces
 {
-    public interface ITimesheetDayService
+    public interface ITimesheetDayService : IBaseService<TimesheetDay>
     {
+        Task Add(TimesheetDay day);
     }
 }

@@ -16,20 +16,20 @@ namespace TimesheetManagement.Services.General
             Context = context;
         }
 
-        public Task<T> GetById(int id)
-        {
-            throw new NotImplementedException();
-        }
+        //public Task<T> GetById(int id)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public Task<IQueryable<T>> GetAll()
-        {
-            throw new NotImplementedException();
-        }
+        //public Task<IQueryable<T>> GetAll()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public Task Add(T item)
-        {
-            throw new NotImplementedException();
-        }
+        //public Task Add(T item)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
     }
 }

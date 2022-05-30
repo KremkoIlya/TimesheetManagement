@@ -11,10 +11,10 @@ namespace TimesheetManagement.Services.General
     {
         ITimesheetManagementContext Context { get; set; }
 
-        Task<T> GetById(int id);
+        //Task<T> GetById(int id);
 
-        Task<IQueryable<T>> GetAll();
+        //Task<IQueryable<T>> GetAll();
 
-        Task Add(T item);
+        //Task Add(T item);
     }
 }
