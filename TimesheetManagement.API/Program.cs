@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
+using TimesheetManagement.Data.Contexts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +11,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     {
         options.Audience = builder.Configuration["ADD:ApplicationId"];
         options.Authority = $"{builder.Configuration["ADD:InstanceId"]}{builder.Configuration["ADD:TenantId"]}";
+    });
+
+builder.Services.AddDbContext<TimesheetManagementContext>(options => 
+    {
+        options.UseSqlServer(builder.Configuration.GetConnectionString("TimesheetManagementSQL"));
     });
 
 builder.Services.AddControllers();
