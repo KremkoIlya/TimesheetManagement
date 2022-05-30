@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using TimesheetManagement.Data.Contexts;
 using TimesheetManagement.Services.DbContext;
+using TimesheetManagement.Services.Timesheet.Implementations;
+using TimesheetManagement.Services.Timesheet.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +22,9 @@ builder.Services.AddDbContext<TimesheetManagementContext>(options =>
     });
 
 builder.Services.AddScoped<ITimesheetManagementContext, TimesheetManagementContext>();
+
+builder.Services.AddTransient<ITimesheetDayService, TimesheetDayService>();
+builder.Services.AddTransient<ITimesheetPeriodService, TimesheetPeriodService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
