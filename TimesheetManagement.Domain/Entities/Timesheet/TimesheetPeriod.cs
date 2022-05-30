@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TimesheetManagement.Domain.Entities.Timesheet
 {
-    public class TimesheetTime : BaseEntity
+    public class TimesheetPeriod : BaseEntity
     {
         public DateTime StartTime { get; set; }
 

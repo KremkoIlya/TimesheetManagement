@@ -10,12 +10,12 @@ namespace TimesheetManagement.Domain.Entities.Timesheet
     {
         public TimesheetDay()
         {
-            TimesheetTimes = new List<TimesheetTime>();
+            TimesheetPeriods = new List<TimesheetPeriod>();
         }
 
         public DayType DayType { get; set; }
 
-        public IEnumerable<TimesheetTime> TimesheetTimes { get; set; }
+        public IEnumerable<TimesheetPeriod> TimesheetPeriods { get; set; }
     }
 
     public enum DayType
