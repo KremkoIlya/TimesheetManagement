@@ -15,6 +15,8 @@ namespace TimesheetManagement.Domain.Entities.Timesheet
 
         public DayType DayType { get; set; }
 
+        public DateTime Date { get; set; }
+
         public IEnumerable<TimesheetPeriod> TimesheetPeriods { get; set; }
     }
 

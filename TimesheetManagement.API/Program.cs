@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using TimesheetManagement.Data.Contexts;
-using TimesheetManagement.Services.Interfaces.DbContext;
+using TimesheetManagement.Services.DbContext;
 
 var builder = WebApplication.CreateBuilder(args);
 
