@@ -8,5 +8,19 @@ namespace TimesheetManagement.Domain.Entities.Timesheet
 {
     public class TimesheetDay : BaseEntity
     {
+        public TimesheetDay()
+        {
+            TimesheetTimes = new List<TimesheetTime>();
+        }
+
+        public DayType DayType { get; set; }
+
+        public IEnumerable<TimesheetTime> TimesheetTimes { get; set; }
+    }
+
+    public enum DayType
+    {
+        WorkingDay,
+        DayOff
     }
 }
