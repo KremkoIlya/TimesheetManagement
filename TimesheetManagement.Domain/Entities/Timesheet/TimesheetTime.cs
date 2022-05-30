@@ -15,6 +15,6 @@ namespace TimesheetManagement.Domain.Entities.Timesheet
         public bool IsAvailable { get; set; }
 
         public int TimesheetDayId { get; set; }
-        public TimesheetDay TimesheetDay { get; set; }
+        public TimesheetDay? TimesheetDay { get; set; }
     }
 }

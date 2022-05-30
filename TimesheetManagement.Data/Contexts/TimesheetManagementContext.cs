@@ -10,8 +10,8 @@ namespace TimesheetManagement.Data.Contexts
 {
     public class TimesheetManagementContext : DbContext
     {
-        public DbSet<TimesheetDay> TimesheetDays { get; set; }
-        public DbSet<TimesheetTime> TimesheetTimes { get; set; }
+        public DbSet<TimesheetDay>? TimesheetDays { get; set; }
+        public DbSet<TimesheetTime>? TimesheetTimes { get; set; }
 
         public TimesheetManagementContext(DbContextOptions options) : base(options) { }
     }
