@@ -1,16 +1,22 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using NLog;
 using TimesheetManagement.API.Infrastructure.Extensions;
 using TimesheetManagement.Data.Contexts;
 using TimesheetManagement.Services.DbContext;
+using TimesheetManagement.Services.Logging;
 using TimesheetManagement.Services.Timesheet.Implementations;
 using TimesheetManagement.Services.Timesheet.Interfaces;
+using TimesheetManagement.Utils.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.ConfigureCors();
+LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
+
+builder.Services.ConfigureCors(); 
+builder.Services.ConfigureLoggerService();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>

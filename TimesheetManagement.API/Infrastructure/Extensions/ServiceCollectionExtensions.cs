@@ -1,4 +1,7 @@
-﻿namespace TimesheetManagement.API.Infrastructure.Extensions
+﻿using TimesheetManagement.Services.Logging;
+using TimesheetManagement.Utils.Logging;
+
+namespace TimesheetManagement.API.Infrastructure.Extensions
 {
     public static class ServiceCollectionExtensions
     {
@@ -11,6 +14,11 @@
                     .AllowAnyMethod()
                     .AllowAnyHeader());
             });
+        }
+
+        public static void ConfigureLoggerService(this IServiceCollection services)
+        {
+            services.AddSingleton<ILoggerService, LoggerService>();
         }
     }
 }

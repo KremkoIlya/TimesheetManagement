@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TimesheetManagement.Data\TimesheetManagement.Data.csproj" />
+    <ProjectReference Include="..\TimesheetManagement.Utils\TimesheetManagement.Utils.csproj" />
   </ItemGroup>
 
 </Project>
