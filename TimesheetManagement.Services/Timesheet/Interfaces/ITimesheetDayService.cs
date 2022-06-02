@@ -10,6 +10,6 @@ namespace TimesheetManagement.Services.Timesheet.Interfaces
 {
     public interface ITimesheetDayService : IBaseService<TimesheetDay>
     {
-        Task Add(TimesheetDay day);
+        Task<int> Add(TimesheetDay day);
     }
 }

@@ -18,9 +18,10 @@ namespace TimesheetManagement.Services.Timesheet.Implementations
             Context = context;
         }
 
-        public Task Add(TimesheetPeriod period)
+        public Task<int> Add(TimesheetPeriod period)
         {
-            return Context.TimesheetPeriods.AddAsync(period).AsTask();
+            Context.TimesheetPeriods.AddAsync(period);
+            return Context.SaveChanges();
         }
     }
 }

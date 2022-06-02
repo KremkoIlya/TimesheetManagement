@@ -18,9 +18,10 @@ namespace TimesheetManagement.Services.Timesheet.Implementations
             Context = context;
         }
 
-        public Task Add(TimesheetDay day)
+        public Task<int> Add(TimesheetDay day)
         {
-            return Context.TimesheetDays.AddAsync(day).AsTask();
+            Context.TimesheetDays.AddAsync(day);
+            return Context.SaveChanges();
         }
     }
 }
