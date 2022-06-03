@@ -5,18 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using TimesheetManagement.Domain.Entities.Timesheet;
 using TimesheetManagement.Services.DbContext;
+using TimesheetManagement.Services.General;
 using TimesheetManagement.Services.Timesheet.Interfaces;
 
 namespace TimesheetManagement.Services.Timesheet.Implementations
 {
-    public class TimesheetDayService : ITimesheetDayService
+    public class TimesheetDayService : BaseService<TimesheetDay>, ITimesheetDayService
     {
-        public ITimesheetManagementContext Context { get; set; }
-
-        public TimesheetDayService(ITimesheetManagementContext context)
-        {
-            Context = context;
-        }
+        public TimesheetDayService(ITimesheetManagementContext context) : base(context)
+        { }
 
         public Task<int> Add(TimesheetDay day)
         {

@@ -8,7 +8,7 @@ using TimesheetManagement.Services.General;
 
 namespace TimesheetManagement.Services.Timesheet.Interfaces
 {
-    public interface ITimesheetPeriodService : IBaseService<TimesheetPeriod>
+    public interface ITimesheetPeriodService
     {
         Task<int> Add(TimesheetPeriod day);
     }
