@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using TimesheetManagement.Contracts.General;
+﻿using TimesheetManagement.Contracts.General;
+using TimesheetManagement.Domain.Entities.Timesheet;
 
 namespace TimesheetManagement.Contracts.Timesheet
 {
-    public interface ITimesheetPeriodService
+    public interface ITimesheetPeriodService : IBaseService<TimesheetPeriod>
     { }
 }

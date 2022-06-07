@@ -2,8 +2,10 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using NLog;
 using TimesheetManagement.API.Infrastructure.Extensions;
+using TimesheetManagement.Contracts.General;
 using TimesheetManagement.Contracts.Timesheet;
 using TimesheetManagement.Data.Contexts;
+using TimesheetManagement.Services.General;
 using TimesheetManagement.Services.Timesheet.Implementations;
 
 var builder = WebApplication.CreateBuilder(args);

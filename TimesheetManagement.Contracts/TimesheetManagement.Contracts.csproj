@@ -5,4 +5,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TimesheetManagement.Domain\TimesheetManagement.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

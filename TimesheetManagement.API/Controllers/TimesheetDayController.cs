@@ -24,6 +24,11 @@ namespace TimesheetManagement.API.Controllers
             //Organize validating
             //Organize error handling
             //Organize exception handling
+            await _timesheetDayService.Create(new Domain.Entities.Timesheet.TimesheetDay 
+            {
+                Date = model.Date,
+                DayType = (Domain.Entities.Timesheet.DayType)model.DayType,
+            });
         }
     }
 }
