@@ -30,8 +30,6 @@ builder.Services.AddDbContext<TimesheetManagementContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("TimesheetManagementSQL"));
     });
 
-builder.Services.AddScoped<ITimesheetManagementContext, TimesheetManagementContext>();
-
 builder.Services.AddTransient<ITimesheetDayService, TimesheetDayService>();
 builder.Services.AddTransient<ITimesheetPeriodService, TimesheetPeriodService>();
 
