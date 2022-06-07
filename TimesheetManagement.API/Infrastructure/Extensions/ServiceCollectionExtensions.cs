@@ -1,4 +1,4 @@
-﻿using TimesheetManagement.Services.Logging;
+﻿using TimesheetManagement.Contracts.Logging;
 using TimesheetManagement.Utils.Logging;
 
 namespace TimesheetManagement.API.Infrastructure.Extensions

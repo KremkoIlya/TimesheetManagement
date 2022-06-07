@@ -1,8 +1,5 @@
 ﻿using NLog;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using TimesheetManagement.Services.Logging;
+using TimesheetManagement.Contracts.Logging;
 
 namespace TimesheetManagement.Utils.Logging
 {

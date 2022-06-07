@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TimesheetManagement.API.Models.TimesheetDay;
-using TimesheetManagement.Services.Timesheet.Interfaces;
+using TimesheetManagement.Contracts.Timesheet;
 
 namespace TimesheetManagement.API.Controllers
 {
@@ -24,7 +24,6 @@ namespace TimesheetManagement.API.Controllers
             //Organize validating
             //Organize error handling
             //Organize exception handling
-            await _timesheetDayService.Add(new Domain.Entities.Timesheet.TimesheetDay { Date = model.Date, DayType = (Domain.Entities.Timesheet.DayType)model.DayType });
         }
     }
 }

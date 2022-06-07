@@ -1,21 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
-using TimesheetManagement.Services.DbContext;
+using TimesheetManagement.Contracts.General;
 
 namespace TimesheetManagement.Services.General
 {
     public class BaseService<T> : IBaseService<T> where T: class
     {
-        public ITimesheetManagementContext Context { get ; set; }
-
-        public BaseService(ITimesheetManagementContext context)
-        {
-            Context = context;
-        }
+        public BaseService()
+        { }
 
         public IQueryable<T> GetAll()
         {
