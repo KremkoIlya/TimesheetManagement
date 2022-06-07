@@ -11,13 +11,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{1271D51A-ABDB-4C71-B8A0-A3A8AA07A60D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimesheetManagement.Domain", "TimesheetManagement.Domain\TimesheetManagement.Domain.csproj", "{079EAADC-8079-4E60-9303-D3B42C27E2A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimesheetManagement.Domain", "TimesheetManagement.Domain\TimesheetManagement.Domain.csproj", "{079EAADC-8079-4E60-9303-D3B42C27E2A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimesheetManagement.Services", "TimesheetManagement.Services\TimesheetManagement.Services.csproj", "{8274EEF5-E9B6-4FE4-921D-2FEA4D917850}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimesheetManagement.Services", "TimesheetManagement.Services\TimesheetManagement.Services.csproj", "{8274EEF5-E9B6-4FE4-921D-2FEA4D917850}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimesheetManagement.Utils", "TimesheetManagement.Utils\TimesheetManagement.Utils.csproj", "{C91C9C6C-E477-4B08-BC52-BD8D731B8E02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimesheetManagement.Utils", "TimesheetManagement.Utils\TimesheetManagement.Utils.csproj", "{C91C9C6C-E477-4B08-BC52-BD8D731B8E02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimesheetManagement.Data", "TimesheetManagement.Data\TimesheetManagement.Data.csproj", "{642BC627-060D-400B-92FB-77613DB25FB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimesheetManagement.Data", "TimesheetManagement.Data\TimesheetManagement.Data.csproj", "{642BC627-060D-400B-92FB-77613DB25FB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimesheetManagement.Contracts", "TimesheetManagement.Contracts\TimesheetManagement.Contracts.csproj", "{9CEFCB4D-EBE8-4278-B213-0AEBDBFC8956}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{642BC627-060D-400B-92FB-77613DB25FB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{642BC627-060D-400B-92FB-77613DB25FB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{642BC627-060D-400B-92FB-77613DB25FB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CEFCB4D-EBE8-4278-B213-0AEBDBFC8956}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CEFCB4D-EBE8-4278-B213-0AEBDBFC8956}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CEFCB4D-EBE8-4278-B213-0AEBDBFC8956}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CEFCB4D-EBE8-4278-B213-0AEBDBFC8956}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{8274EEF5-E9B6-4FE4-921D-2FEA4D917850} = {8B683E52-9027-4D12-8DB0-18713EBC1045}
 		{C91C9C6C-E477-4B08-BC52-BD8D731B8E02} = {9ED6FE9A-63B4-4641-AA96-ACCCAA616C30}
 		{642BC627-060D-400B-92FB-77613DB25FB3} = {9ED6FE9A-63B4-4641-AA96-ACCCAA616C30}
+		{9CEFCB4D-EBE8-4278-B213-0AEBDBFC8956} = {8B683E52-9027-4D12-8DB0-18713EBC1045}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CCFD9620-2479-4946-B0D8-0520FEA5C85B}

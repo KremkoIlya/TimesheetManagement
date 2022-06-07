@@ -9,5 +9,6 @@ namespace TimesheetManagement.Services.DbContext
         public DbSet<TimesheetPeriod> TimesheetPeriods { get; set; }
 
         Task<int> SaveChanges();
+
     }
 }
