@@ -10,9 +10,9 @@ namespace TimesheetManagement.Contracts.General
     public interface IBaseService<T> where T : class
     {
         IQueryable<T> GetAll();
-        IQueryable<T> GetBy(Expression<Func<T, bool>> expression, bool trackChanges);
+        IQueryable<T> GetBy(Expression<Func<T, bool>> expression);
         Task Create(T entity);
-        Task Update(T entity);
-        Task Delete(T entity);
+        void Update(T entity);
+        void Delete(T entity);
     }
 }

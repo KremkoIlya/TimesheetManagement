@@ -3,37 +3,42 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using TimesheetManagement.Contracts.General;
+using TimesheetManagement.Data.Contexts;
 
 namespace TimesheetManagement.Services.General
 {
     public class BaseService<T> : IBaseService<T> where T: class
     {
-        public BaseService()
-        { }
+        protected TimesheetManagementContext _context;
+
+        public BaseService(TimesheetManagementContext context)
+        {
+            _context = context;
+        }
 
         public IQueryable<T> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Set<T>();
         }
 
-        public IQueryable<T> GetBy(Expression<Func<T, bool>> expression, bool trackChanges)
+        public IQueryable<T> GetBy(Expression<Func<T, bool>> expression)
         {
-            throw new NotImplementedException();
+            return _context.Set<T>().Where(expression);
         }
 
         public Task Create(T entity)
         {
-            throw new NotImplementedException();
+            return _context.Set<T>().AddAsync(entity).AsTask();
         }
 
-        public Task Update(T entity)
+        public void Update(T entity)
         {
-            throw new NotImplementedException();
+            _context.Set<T>().Update(entity);
         }
 
-        public Task Delete(T entity)
+        public void Delete(T entity)
         {
-            throw new NotImplementedException();
+            _context.Set<T>().Remove(entity);
         }
     }
 }
