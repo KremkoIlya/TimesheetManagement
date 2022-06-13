@@ -26,9 +26,9 @@ namespace TimesheetManagement.Services.General
             return _context.Set<T>().Where(expression);
         }
 
-        public Task Create(T entity)
+        public void Create(T entity)
         {
-            return _context.Set<T>().AddAsync(entity).AsTask();
+            _context.Set<T>().Add(entity);
         }
 
         public void Update(T entity)
@@ -39,6 +39,11 @@ namespace TimesheetManagement.Services.General
         public void Delete(T entity)
         {
             _context.Set<T>().Remove(entity);
+        }
+
+        public Task<int> SaveChangesAsync()
+        {
+            return _context.SaveChangesAsync();
         }
     }
 }

@@ -11,8 +11,9 @@ namespace TimesheetManagement.Contracts.General
     {
         IQueryable<T> GetAll();
         IQueryable<T> GetBy(Expression<Func<T, bool>> expression);
-        Task Create(T entity);
+        void Create(T entity);
         void Update(T entity);
         void Delete(T entity);
+        Task<int> SaveChangesAsync();
     }
 }

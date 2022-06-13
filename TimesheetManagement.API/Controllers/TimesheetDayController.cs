@@ -6,7 +6,7 @@ using TimesheetManagement.Contracts.Timesheet;
 namespace TimesheetManagement.API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/timesheetdays")]
     public class TimesheetDayController : ControllerBase
     {
         protected ITimesheetDayService _timesheetDayService;
@@ -17,18 +17,19 @@ namespace TimesheetManagement.API.Controllers
         }
 
         [HttpPost]
-        public async void Post([FromBody]TimesheetDayVM model)
+        public async Task Post([FromBody]TimesheetDayVM model)
         {
             //TODO: Add mappings from VM to DM and from DM to entities
             //Organize the responses(models) from our API
             //Organize validating
             //Organize error handling
             //Organize exception handling
-            await _timesheetDayService.Create(new Domain.Entities.Timesheet.TimesheetDay 
+            _timesheetDayService.Create(new Domain.Entities.Timesheet.TimesheetDay 
             {
                 Date = model.Date,
                 DayType = (Domain.Entities.Timesheet.DayType)model.DayType,
             });
+            await _timesheetDayService.SaveChangesAsync();
         }
     }
 }
