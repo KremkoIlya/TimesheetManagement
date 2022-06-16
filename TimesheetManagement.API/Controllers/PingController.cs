@@ -12,12 +12,5 @@ namespace TimesheetManagement.API.Controllers
         {
             return "pong";
         }
-
-        [Authorize]
-        [HttpGet("auth")]
-        public string PingAuth()
-        {
-            return "auth pong";
-        }
     }
 }
