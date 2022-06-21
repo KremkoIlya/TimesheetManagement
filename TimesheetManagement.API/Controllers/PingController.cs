@@ -10,7 +10,7 @@ namespace TimesheetManagement.API.Controllers
         [HttpGet]
         public string Ping()
         {
-            return "pong";
+            return "pong-CTOXYEB";
         }
     }
 }
